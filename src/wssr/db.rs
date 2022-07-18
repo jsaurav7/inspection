@@ -21,7 +21,7 @@ impl DB {
             .bind(id)
             .fetch_one(&self.0)
             .await
-            .and_then(|r| Ok(r.try_get(0)?))
+            .and_then(|r| Ok(r.get("long_url")))
             .map_err(|e| {
                 tracing::error!("Failed to get url: {:?}", e);
                 e.into()

@@ -7,10 +7,18 @@ edition = "2021"
 
 [dependencies]
 lambda-web = { version = "0.2.0", features = ["rocket05"] }
+reqwest = { version = "0.11.11", features = ["json"] }
 rocket = { version = "0.5.0-rc.2", features = ["json"] }
 rocket_db_pools = { version = "0.1.0-rc.2", features = ["sqlx_mysql"] }
 serde = { version = "1.0.139", features = ["derive"] }
+sqlx = { version = "0.5", default-features = false, features = ["chrono", "decimal", "macros"] }
 serde_json = "1.0.82"
+lettre = { version = "0.10.0", features = ["tokio1-native-tls"] }
 thiserror = "1.0.31"
 tracing = { version = "0.1.35", features = ["log"] }
 tracing-subscriber = { version = "0.3.14", default-features = false, features = ["fmt"] }
+aws-sdk-s3 = "0.15.0"
+aws-config = "0.15.0"
+dotenv = "0.15.0"
+uuid = { version = "1.1.2", features = ["v4"] }
+itertools = "0.10.3"

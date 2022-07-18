@@ -8,7 +8,7 @@ use crate::DB;
 #[derive(serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct SaveUrlRequest {
-    pub long_url: String,
+    long_url: String,
 }
 
 #[tracing::instrument(skip(db, save_url_req))]
